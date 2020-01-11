@@ -7,8 +7,15 @@
 
 // I AM NOT DONE
 
+macro_rules! my_macro {
+    ($name: expr) => {
+        return "Hello " + $name;
+    };
+}
+
 fn main() {
     if my_macro!("world!") != "Hello world!" {
         panic!("Oh no! Wrong output!");
     }
 }
+
